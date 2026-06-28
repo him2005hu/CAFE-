@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+
+<html class="scroll-smooth" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AK CAFE | Brewing Happiness Daily</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&amp;family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed": "#e9e2cc",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "surface-container": "#f0eded",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "on-primary-container": "#c19c94",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#676351",
+                        "on-tertiary-container": "#d09c11",
+                        "on-tertiary-fixed": "#261a00",
+                        "surface-container-high": "#eae7e7",
+                        "surface-variant": "#e5e2e1",
+                        "on-tertiary-fixed-variant": "#5c4300",
+                        "surface-bright": "#fcf9f8",
+                        "on-surface": "#1c1b1b",
+                        "secondary-container": "#e6e0c9",
+                        "primary": "#361f1a",
+                        "primary-fixed-dim": "#e5beb5",
+                        "on-secondary-fixed": "#1e1c0e",
+                        "tertiary-fixed-dim": "#f6be39",
+                        "on-error": "#ffffff",
+                        "secondary": "#625f4d",
+                        "inverse-on-surface": "#f3f0ef",
+                        "outline-variant": "#d4c3bf",
+                        "on-primary-fixed": "#2b1611",
+                        "tertiary-container": "#4c3700",
+                        "tertiary": "#312200",
+                        "outline": "#827471",
+                        "surface-dim": "#dcd9d9",
+                        "surface-tint": "#755750",
+                        "inverse-surface": "#313030",
+                        "background": "#fcf9f8",
+                        "on-primary": "#ffffff",
+                        "surface-container-highest": "#e5e2e1",
+                        "on-secondary-fixed-variant": "#4a4737",
+                        "surface": "#fcf9f8",
+                        "on-surface-variant": "#504442",
+                        "error-container": "#ffdad6",
+                        "primary-container": "#4e342e",
+                        "secondary-fixed-dim": "#ccc6b1",
+                        "tertiary-fixed": "#ffdfa0",
+                        "on-tertiary": "#ffffff",
+                        "inverse-primary": "#e5beb5",
+                        "on-primary-fixed-variant": "#5c403a",
+                        "primary-fixed": "#ffdad2",
+                        "on-error-container": "#93000a"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "stack-lg": "32px",
+                        "margin-mobile": "16px",
+                        "gutter": "24px",
+                        "margin-desktop": "40px",
+                        "stack-md": "16px",
+                        "stack-sm": "8px",
+                        "container-max": "1200px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Literata", "serif"],
+                        "headline-md": ["Literata", "serif"],
+                        "headline-sm": ["Literata", "serif"],
+                        "body-lg": ["Plus Jakarta Sans", "sans-serif"],
+                        "body-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "label-md": ["Plus Jakarta Sans", "sans-serif"],
+                        "caption": ["Plus Jakarta Sans", "sans-serif"]
+                    },
+                    "fontSize": {
+                        "display-lg": ["48px", {"lineHeight": "56px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                        "headline-md": ["32px", {"lineHeight": "40px", "fontWeight": "600"}],
+                        "headline-sm": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                        "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                        "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                        "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.01em", "fontWeight": "600"}],
+                        "caption": ["12px", {"lineHeight": "16px", "fontWeight": "500"}]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .ambient-shadow {
+            box-shadow: 0 4px 20px -2px rgba(78, 52, 46, 0.05);
+        }
+        .lift-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 32px -4px rgba(78, 52, 46, 0.1);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface selection:bg-tertiary-fixed selection:text-on-tertiary-fixed">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-surface/80 backdrop-blur-md shadow-sm">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">AK CAFE</span>
+<div class="hidden md:flex items-center gap-stack-lg">
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#menu">Menu</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#about">About</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#gallery">Gallery</a>
+<a class="font-label-md text-label-md text-on-surface-variant hover:text-tertiary-container transition-colors duration-300" href="#contact">Contact</a>
+</div>
+<button class="bg-[#D4A017] text-[#1c1b1b] px-6 py-2.5 rounded-2xl font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all shadow-sm">
+                Order Now
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center pt-20 px-margin-mobile md:px-margin-desktop overflow-hidden">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-gutter items-center z-10">
+<div class="space-y-stack-md">
+<h1 class="font-display-lg text-display-lg text-primary max-w-xl">
+                    Brewing Happiness, One Cup at a Time.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-lg">
+                    Enjoy freshly brewed coffee, tasty snacks, and a relaxing atmosphere at AK CAFE.
+                </p>
+<div class="flex flex-wrap gap-stack-md pt-stack-sm">
+<a class="bg-[#D4A017] text-black px-8 py-4 rounded-2xl font-label-md text-label-md flex items-center gap-2 lift-hover transition-all" href="https://wa.me/919354114810" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+                        Order on WhatsApp
+                    </a>
+<a class="border-2 border-primary text-primary px-8 py-4 rounded-2xl font-label-md text-label-md lift-hover transition-all" href="#menu">
+                        View Menu
+                    </a>
+<a class="flex items-center gap-2 text-primary font-label-md text-label-md underline underline-offset-4 decoration-tertiary-fixed transition-all hover:decoration-tertiary-container" href="#contact">
+                        Visit Us
+                    </a>
+</div>
+</div>
+<div class="relative group">
+<div class="absolute -inset-4 bg-tertiary-fixed/20 blur-3xl rounded-full -z-10 group-hover:scale-110 transition-transform duration-700"></div>
+<div class="aspect-[4/5] rounded-[2.5rem] overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="A warm, atmospheric high-resolution photograph of steam rising from a freshly poured latte in a ceramic cup. The scene is set in a high-end neighborhood cafe with warm amber lighting, wooden furniture, and blurred greenery in the background. The aesthetic is cozy and premium, featuring rich brown coffee tones and creamy white foam in a rustic yet modern setting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEP1ehY2yOO-V5TZNf58HLAAQuy8TVMgzvlqoS_yNsq4DGYtmgw9XFXZQ2pGTw3ctYqpTG5a6uvqmxJPnzRaYxJIoMIUP7RTT4ShuZw3o6WrcKGlVChPiriAW8mCD2RSR1dZQvtrMdOWQC9-v1coTTULfaH8jjq5PPDNFmXlcRfAW64p8mnJYqRA-ST7tzhk7f3c1Yga8RnKeCXfBlfdJ4Z5v5m2q4m1ePXy4325gDZl-62mOS3KfLV_LfutFXUQ555z-Iwy5XBhM"/>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container-low" id="about">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-stack-lg items-center">
+<div class="order-2 md:order-1 rounded-[2.5rem] overflow-hidden ambient-shadow">
+<img class="w-full h-full object-cover aspect-video" data-alt="A candid lifestyle shot of a diverse group of young professionals and friends laughing and sharing coffee in a sun-drenched, modern cafe. Large windows let in soft, natural light that highlights the warm wood textures and cream-colored walls. The mood is social, welcoming, and relaxed, perfectly capturing a neighborhood gathering spot vibe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCiQjOGMt6uprx1tjYG_8GnV7iVNXZEe2GdUsyEadOS-lqIH31UZsLiMEGW-mjx4yLgajslpEtfprVpwN-wZxFstz-vRw-1t11bjFtjJLkN8XM_6r1uCyPF531i8JMgA--yGPEz_L3hCwhYHgfR6jFT5JkoCp3hJ6WQJnR8ZDZiZsZjVUPye-qG-TbL4S4WyzqqofbdiV5UsQB3O5lN7jQLjqQ5zYIzBzt7nfKUkqtBO0mLG_wIn46mebrs0BXV3nMyVQOoXFG3wAY"/>
+</div>
+<div class="order-1 md:order-2 space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">About AK CAFE</h2>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                    At AK CAFE, we serve premium coffee, refreshing beverages, delicious snacks, and unforgettable experiences. Whether you're meeting friends, working, or enjoying your favorite coffee, our café offers the perfect atmosphere.
+                </p>
+<div class="grid grid-cols-2 gap-stack-md pt-4">
+<div class="p-4 bg-surface rounded-2xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-tertiary-container mb-2">favorite</span>
+<h4 class="font-label-md text-label-md text-primary">Quality First</h4>
+</div>
+<div class="p-4 bg-surface rounded-2xl border border-outline-variant/30">
+<span class="material-symbols-outlined text-tertiary-container mb-2">groups</span>
+<h4 class="font-label-md text-label-md text-primary">Community</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Special Menu Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop" id="menu">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-stack-lg">
+<h2 class="font-headline-md text-headline-md text-primary">Our Special Menu</h2>
+<div class="w-16 h-1 bg-[#D4A017] mx-auto mt-4 rounded-full"></div>
+</div>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-gutter">
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="A professional close-up of a classic cappuccino with intricate latte art on a dark stone coaster. The lighting is focused and warm, emphasizing the rich brown coffee and white microfoam. Modern cafe background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbJJ8IRtV08f7X3s8sd1cTprCeU1RIJChtPpkAo4qDRu2r2w_h0GTFkMxotfcc7Et6699hNdE05Ynj1mn-EigXpTnHIy6Vbn8ZAYoERCWun1fUZ5xf1HpNqebMftUC0Qtc5S11fSIpUaW8baZst2AAKjgFOVzknZbzFDf_wEQ_GAJQd3CVtOCTLaejs-yoEaWJxymJiMR5tzR6RNfiYoPsj7TDetLJdUXYnqkLz_2bMaJCZ2bRYvKHII4pmd2ctLxCGq9AuiPyUqk"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">Hot Coffee</h3>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="An iced coffee with layers of espresso and milk, condensation on the glass, in a bright summer setting. Gold sunlight filtering through a window." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCYdCdcDY_RaiQgRlOfusju8s70kYZML3LdHQJFWC7lIA3z91gGIYCfVGXB2YZ0ogrYnGixSWjH8RyfznjVqHZi15dvKgSHfqT-wB9LHBPvJ_ovCc0L-PmmFDm6HdoZgeAcYfXllJGsPsGjmaRtA0LqiBLtBdIVF9uQYK93nu6jDZYFRXFAd4rhOjK-oITzxgQFLPPSH71zMGBw2rnZEzDU-Ax5MbsEc8C0ekPgqK68Kx8vEm_eVE9xh09uwVEqHU-zCKP-Oo_60nU"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">Cold Coffee</h3>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="A thin-crust artisanal pizza with fresh basil and melting mozzarella cheese. Warm, rustic food photography style with rich earth tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBVqO13led1tujzDVew4n_PqXaZ7SsuW81ukwdr1Vc-oxS1rokAFRplECyNuKrEOL51sFO8tEQPuQgUzQevvkOGICsHRwVSl2IsX15Uf-zyFUSN0fV5M3kuFkQxVb8cecXARIRYfAJ-WYHDt3sROXWlbgdi3eCyyq31giHIovweSqddBdK7MnwUdoOX71PZHDNuyPJH6JLM3vIzW7SbYxKchekx6B9aPN8s0wAbp3NNkWMiKPZsgXWwf3ZxSz5jwc0ymFHMafBz7R4"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">Pizza</h3>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="A gourmet burger with a toasted brioche bun and fresh vegetables, served on a wooden board. Professional culinary lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCXE_JoPdVz_aGwDgUuazrWCLHl9O1j5OtYqDWESCWMyE9p3iL5tO4ISXk-7Ux2OQRSL_JmwB_PVm7Ln5jobOzykdy2pQIgrGJ2h1t9nH8YdQ4gVwER4pOxobF4DPI1MKG_XfZTFxv7XXM7Qp9vYN2iVzlPd-pCwrdHpHj7YerS8xs6loXuEKS7VKtWnsN9vWAQxF1FQsz1m1ytSRS4RQf2MYPO6kurkNU8uiZzdKQb1q85fEwliL5Rd8XpP7ICjknBjTlLFnXGAmo"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">Burgers</h3>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="A toasted club sandwich cut diagonally showing layers of fresh ingredients. Bright, airy composition." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCvPd_g5N6zcKGKBo3atTEGr_Brq6uoyJdUxJeBo9qdpAOiAPP1_7luT6zT8SE8I4JIYy6COcGhd8FnZTjWTI2HAstCMFvDO58Memtn1-i3rRg3NqEi4ecYWvb9Dt1DZUr4B6eX5ml3pIMTopmRCfoeTT4EtA9eMUNyB_14C39A08XEa7Yka9vUJaFiqf_G5Si1jpwGugyBKVnkk8kXjL1UFDkNON0m6Fcntwr_X-gQHTBIFXcsvEyAztIoGNY2eFOlgUnbCaxv8Po"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">Sandwiches</h3>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="Crispy golden french fries in a metal basket, sprinkled with sea salt and herbs. High-contrast food photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDnyqRxxhGV--UyXrtmMiIKmprUXJG_brUdgCkztAjoEZl4DxnR-PzV5nRHqkBKRWmB4gjvfuLzzuPhbrqoLJZXXHn-8aDx4pAS4sgerca9FKmS1r9X5BCYQNHGORAjMQmSvbvA8HmL3_cmD1khoxtwWYhww4GhkVPrfRb-aSuFIsw-l64jlej4HJHhsXP5S7Oztn4wxjjVD5dMkB8VmcD4mLcmCNtbNthJYhXLK2_oC0nhKj7YHueVP7BOYMjpb2uMZ9u0BLCbRd8"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">French Fries</h3>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="A decadent chocolate molten lava cake with a dusting of sugar and a side of cream. Dark and moody dessert photography." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD_M6kqb2N191rVqv5r9WWC3BvYXg0DKiGSgOEo7joPbhYOlVaZmX5-sCZEpFCvVmUykRdvqglL9-MyilxfnLfZhHedeW9ovwvG7uab_VNynVu8gFdu6pkd94dEvECUJYxf3LjxFM1G1GdQN3TmtjL6P2gTrQOE2U8r2i4cn-ybyHywm6p3FEcBffR054HQDc0FMC9JBdMoByP_8w1kSSPOpmCopSDWEaMKaRlGgN_BMSlqV8z-vVrjKqktP80ZdGUNmb05-S6dW8s"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">Desserts</h3>
+</div>
+</div>
+<!-- Menu Item -->
+<div class="bg-surface ambient-shadow rounded-2xl overflow-hidden lift-hover transition-all">
+<img class="w-full h-40 object-cover" data-alt="A colorful, vibrant mocktail with fresh mint leaves and fruit slices in a tall glass. Refreshing and bright lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCnxk0O3PNMq6MU36FWlmp03Wbzmr3IDDviA_M3dKN492aInFvjfpfqJO7-nZALHpruSPJ1JaHAfqPY3vT7lzFwgOjl92x3g_V0RIeT7zFcSELvA_Cce4grl0Cfw05qpaQI40c_BCKuYADEKjmsvnomVy-HJ0QA5UOthW0BrN7YEuKuA0yXHJbH6z7hUwfHD8-GfLx1P1VVmyo3KZmDSDftIHMtwxMgWq0GnbxYAExk7Ndq0AGGt5UGgh9MYJw3sifSjBCWxGhYCsE"/>
+<div class="p-4">
+<h3 class="font-label-md text-label-md text-primary">Mocktails</h3>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-primary text-on-primary rounded-[3rem] mx-margin-mobile md:mx-margin-desktop">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-center mb-stack-lg">Why Choose AK CAFE?</h2>
+<div class="grid grid-cols-2 lg:grid-cols-4 gap-stack-md">
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">restaurant_menu</span>
+<p class="font-label-md text-label-md">Fresh Ingredients</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">speed</span>
+<p class="font-label-md text-label-md">Fast Service</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">chair</span>
+<p class="font-label-md text-label-md">Comfortable Seating</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">wifi</span>
+<p class="font-label-md text-label-md">Free Wi-Fi</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">payments</span>
+<p class="font-label-md text-label-md">Affordable Prices</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">family_restroom</span>
+<p class="font-label-md text-label-md">Family Friendly</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">chat</span>
+<p class="font-label-md text-label-md">WhatsApp Ordering</p>
+</div>
+<div class="flex flex-col items-center text-center p-6 bg-white/5 rounded-2xl hover:bg-white/10 transition-colors">
+<span class="material-symbols-outlined text-[#D4A017] text-4xl mb-4">verified</span>
+<p class="font-label-md text-label-md">Best Quality</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop" id="gallery">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-stack-lg">Our Gallery</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-md h-[800px] md:h-[600px]">
+<div class="md:col-span-2 rounded-[2.5rem] overflow-hidden shadow-lg lift-hover transition-all">
+<img class="w-full h-full object-cover" data-alt="A wide angle shot of a stylish cafe interior with floor-to-ceiling windows, mid-century modern furniture, and warm pendant lights. The atmosphere is vibrant yet peaceful, with hints of greenery and the smell of coffee almost tangible through the image." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCtnOONanxaZmD-ZfAWUt1EvVDNxqMMsTwG7sniHsMgWe9saFO1fmk8UxJfOmqYuS004vse99z7C63yCp3SnXScp1YRPvKJFvJd6MZJ2GqpCopzZZR8hwoS6_UBz906xFTB0ElhOlg80OyweqO_gP--DTQBscQ1i7CezLui7oDcc0AjN7ygIzuy9fHHiAje4oGYUba6t-Aq5pz5cQZaeixj139jh-Xj3sSTe2B985ipUqahx3KnzjzJbEw1TxmHPBtzv7FXV4kJbDU"/>
+</div>
+<div class="rounded-[2.5rem] overflow-hidden shadow-lg lift-hover transition-all">
+<img class="w-full h-full object-cover" data-alt="A vertical close-up of a barista expertly pouring milk into a coffee cup, creating a heart pattern. Focus on the hands and the silky texture of the milk." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCMqQCvtXJJvHEQnVXW75WCOzPFFZy4F7gjx-g2VubvANkhq8n-9USkkn_T5R0MaB2d3RO9Ij0QemMJw6qi2YYTTQfGa29499eDG5jxL7foSxmhf8286W9drIZkuR7T1pV1mtIf94BXzfIEhQ_4hpdP888FcPp5_QLT70uza0rbPvZ0B0yAXOgMr1Cf0AtCS3WE7FBx_pIl7O34WPPwrByMB3UWTSuhQjeNAXFTC4kGDY9HpPr3QAIdiUreJJQ0sbZ_uiH4WeR6ozE"/>
+</div>
+<div class="rounded-[2.5rem] overflow-hidden shadow-lg lift-hover transition-all">
+<img class="w-full h-full object-cover" data-alt="A group of friends laughing at a wooden table covered with coffees, pastries, and a laptop. Authentic, joy-filled moment in a local cafe." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBrZV1v3qg5NysZJVJ75d0AGzBIpYqSbuUWt5UYsdqmPDH-mtaumDA_TuQlgPNN91HVpJS8QDagWR7pgG5HjtP58yuP7pV8ElBqqbcx_7FwJ5I1U3PMrIB4pPsaufsLiWbGXwEHxD3qGWYQI7VBMWfPzRxRusHCbtSSQ3E47cuE3FVBqadc4tDHf5xOQdo6itQyuOAgInEUBqmKPd3-LtEfy5RqoWcTgBNV0nVcjmx_pCcLbuaJTC4N2Cvgubj4NjuuNDkyFn78dzY"/>
+</div>
+<div class="md:col-span-2 rounded-[2.5rem] overflow-hidden shadow-lg lift-hover transition-all">
+<img class="w-full h-full object-cover" data-alt="An artistic flat-lay of several cafe food items: a burger, a plate of fries, and two different coffee drinks on a rustic tabletop." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZPTFE9vIGkHU9a8-23DUePoi4gFO8YP7tNhodx3PCp7DXOPqF-Z80jgalAx0W3rYUKrjUNc-kjpYJyXrjtgJ6ljIpG17WNSiGIEKB35Kw5Hg9IMrHUy-kfV4T-li-gTV9AiejCAO01B39vUvolJFE5zHgLYpSwVcj6OON-aMtpMGZnJEhICZvN07T4-2-5sHRFd-Fr342IFpcgoU6z8tAbbu-ZF8LINJAvs_0dSmTj1dYGW_E5xr40YgeRy__iYHnX4vPQ1N6ieA"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Customer Reviews -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop bg-surface-container">
+<div class="max-w-container-max mx-auto">
+<h2 class="font-headline-md text-headline-md text-primary text-center mb-stack-lg">What Our Customers Say</h2>
+<div class="grid md:grid-cols-3 gap-gutter">
+<div class="bg-surface p-8 rounded-2xl ambient-shadow">
+<div class="flex text-[#D4A017] mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-surface-variant mb-6">"Best coffee and amazing atmosphere."</p>
+<p class="font-label-md text-primary">- Sarah M.</p>
+</div>
+<div class="bg-surface p-8 rounded-2xl ambient-shadow">
+<div class="flex text-[#D4A017] mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-surface-variant mb-6">"Delicious food and excellent service."</p>
+<p class="font-label-md text-primary">- David R.</p>
+</div>
+<div class="bg-surface p-8 rounded-2xl ambient-shadow">
+<div class="flex text-[#D4A017] mb-4">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-md italic text-on-surface-variant mb-6">"My favorite place to relax."</p>
+<p class="font-label-md text-primary">- Jessica L.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Checklist -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop">
+<div class="max-w-container-max mx-auto bg-surface-container-low rounded-[2.5rem] p-8 md:p-12 border border-outline-variant/20">
+<div class="grid md:grid-cols-2 gap-stack-lg items-center">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary mb-stack-md">Available Services</h2>
+<ul class="space-y-4">
+<li class="flex items-center gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container">check_circle</span> Dine In
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container">check_circle</span> Takeaway
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container">check_circle</span> Online Orders
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container">check_circle</span> Birthday Parties &amp; Small Events
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container">check_circle</span> Free Wi-Fi
+                        </li>
+<li class="flex items-center gap-3 font-body-md text-on-surface">
+<span class="material-symbols-outlined text-tertiary-container">check_circle</span> WhatsApp Booking
+                        </li>
+</ul>
+</div>
+<div class="hidden md:block">
+<img class="w-full h-auto opacity-80" data-alt="A stylized graphic illustration of cafe services featuring simple line art of coffee cups, delivery bags, and party balloons on a cream background. The style is clean and modern, matching the brand's minimalist and warm aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDw02dCJ8D_VEvMqv6sZqHPa4WgbdOgn0ltzmfWHW8hipDSFUyAG3azLW2R2tOGUvInl9o6S8uwY-jFvzZ49l_aNuZ1CPkQZ5y3G_tpWF9Vb-CompfDqZKjnIvjumY5BFvyUfyBqNmLBg81QpoYtWgWl4xHPnjFaAxW2Gg_15ozkE1XNvULhw8797jyZXTZLMm1lcD5MA-JeuFjok_jVpTkyeEeGiU9Od-DQERt4WrPR1EsSejh7XqJWg17jHt7cdtgmqVitefP8sE"/>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="py-stack-lg px-margin-mobile md:px-margin-desktop" id="contact">
+<div class="max-w-container-max mx-auto grid md:grid-cols-2 gap-stack-lg">
+<div class="space-y-stack-md">
+<h2 class="font-headline-md text-headline-md text-primary">Get in Touch</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container bg-tertiary-fixed p-3 rounded-xl">call</span>
+<div>
+<p class="font-label-md text-primary">Phone</p>
+<p class="font-body-md text-on-surface-variant">9354114810</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container bg-tertiary-fixed p-3 rounded-xl">chat</span>
+<div>
+<p class="font-label-md text-primary">WhatsApp</p>
+<p class="font-body-md text-on-surface-variant">9354114810</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container bg-tertiary-fixed p-3 rounded-xl">location_on</span>
+<div>
+<p class="font-label-md text-primary">Location</p>
+<p class="font-body-md text-on-surface-variant">Your Location Here</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-tertiary-container bg-tertiary-fixed p-3 rounded-xl">schedule</span>
+<div>
+<p class="font-label-md text-primary">Opening Hours</p>
+<p class="font-body-md text-on-surface-variant">9:00 AM – 10:00 PM</p>
+</div>
+</div>
+</div>
+<a class="inline-flex items-center gap-2 bg-[#D4A017] text-black px-8 py-4 rounded-2xl font-label-md text-label-md lift-hover transition-all mt-4" href="https://wa.me/919354114810" target="_blank">
+<span class="material-symbols-outlined">chat</span>
+                    Chat on WhatsApp
+                </a>
+</div>
+<div class="rounded-[2.5rem] overflow-hidden h-[400px] border border-outline-variant/30 ambient-shadow">
+<!-- Location Map Placeholder -->
+<div class="w-full h-full bg-surface-container flex items-center justify-center relative">
+<img class="w-full h-full object-cover opacity-60" data-location="New Delhi" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDZudOiOolwLvmj4ECm41YvwS8H0UVQXlvxUMEi9coNK-Lx8vPUwBHR78AQi0fjteRnlhkKkSr4tbMYYYyjaF7UpzyswoInFiNclIeSWYDEVO84bD8NVwOgFQJwlhk2UQVBEfXEwZ4fVAZy32kNxybfcRa38ARzeDLKbLHw4CZAlwTg4Rr2BXok2Soncc7RcbA3To9CUFdiLdWYJlkdwl4_S8X6-BxnWLGHaPAoJZk9pGhR9d8t7oSaKgtdTGovd4GVnla9n1vSpRc"/>
+<div class="absolute inset-0 flex items-center justify-center pointer-events-none">
+<span class="material-symbols-outlined text-primary text-6xl">location_on</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-surface-container-highest dark:bg-surface-container-low w-full py-stack-lg">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop gap-stack-md max-w-container-max mx-auto">
+<div class="text-center md:text-left">
+<span class="font-headline-sm text-headline-sm font-bold text-primary">AK CAFE</span>
+<p class="font-body-md text-on-surface-variant mt-2 max-w-xs">Brewing Happiness, One Cup at a Time. Fresh Coffee, Great Food &amp; Memorable Moments.</p>
+</div>
+<div class="flex flex-col items-center md:items-end gap-2">
+<div class="flex gap-stack-md mb-2">
+<a class="text-on-surface-variant hover:text-tertiary-container transition-colors font-label-md" href="#">Privacy Policy</a>
+<a class="text-on-surface-variant hover:text-tertiary-container transition-colors font-label-md" href="#">Terms of Service</a>
+</div>
+<p class="font-label-md text-label-md text-on-surface-variant">© 2024 AK CAFE. Brewing Happiness Daily.</p>
+<div class="flex gap-4 mt-2">
+<a class="text-primary hover:text-tertiary-container transition-all" href="#">
+<span class="material-symbols-outlined">public</span>
+</a>
+<a class="text-primary hover:text-tertiary-container transition-all" href="#">
+<span class="material-symbols-outlined">alternate_email</span>
+</a>
+</div>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for images on scroll
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('translate-y-4');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('section img').forEach(img => {
+            img.classList.add('transition-all', 'duration-1000', 'opacity-0', 'translate-y-4');
+            observer.observe(img);
+        });
+
+        // Smooth reveal for sections
+        const sections = document.querySelectorAll('section');
+        sections.forEach(section => {
+            section.classList.add('transition-opacity', 'duration-700');
+        });
+    </script>
+</body></html>
